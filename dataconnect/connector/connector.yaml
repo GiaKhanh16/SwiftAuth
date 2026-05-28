@@ -1,0 +1,6 @@
+connectorId: users
+generate:
+  swiftSdk:
+    - outputDir: ../../../FirebaseDataConnectGenerated
+      package: DataConnectGenerated
+      clientCache: {}

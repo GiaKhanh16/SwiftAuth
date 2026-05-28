@@ -1,0 +1,21 @@
+mutation CreateUser($id: UUID!, $name: String!, $email: String!) @auth(level: PUBLIC) {
+  user_insert(data: {
+    id: $id
+    name: $name
+    email: $email
+  })
+}
+
+mutation UpdateUser($id: UUID!, $name: String, $email: String) {
+  user_update(
+    key: { id: $id }
+    data: {
+      name: $name
+      email: $email
+    }
+  )
+}
+
+mutation DeleteUser($id: UUID!) {
+  user_delete(key: { id: $id })
+}

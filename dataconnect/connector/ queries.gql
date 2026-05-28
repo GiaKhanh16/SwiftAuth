@@ -1,0 +1,15 @@
+query ListUsers {
+  users {
+    id
+    name
+    email
+  }
+}
+
+query GetUser($id: UUID!) {
+  user(key: { id: $id }) {
+    id
+    name
+    email
+  }
+}
